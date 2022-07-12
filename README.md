@@ -19,6 +19,6 @@ Your challenge this week is to update an existing budget tracker application to 
 ![Mock Up screen shot of the Budget Tracker.](./assets/images/19-pwa-homework-demo-01.png)
 
 ## GitHub Location
-https://github.com/omarwright07/employee-tracker
+https://github.com/omarwright07/budget-tracker
 
 ## Heroku Location
