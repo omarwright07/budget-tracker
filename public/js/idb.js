@@ -81,3 +81,6 @@ function uploadPizza() {
         }
     };
 }
+
+// listen for app coming back online
+window.addEventListener('online', uploadPizza);

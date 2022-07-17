@@ -16,6 +16,7 @@ const APP_PREFIX = 'FoodFest-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
+// Installation
 self.addEventListener('install', function (e) {
     e.waitUntil(
         caches.open(CACHE_NAME).then(function (cache) {
@@ -25,6 +26,7 @@ self.addEventListener('install', function (e) {
     )
 })
 
+//Activation
 self.addEventListener('activate', function (e) {
     e.waitUntil(
         caches.keys().then(function (keyList) {
@@ -45,6 +47,7 @@ self.addEventListener('activate', function (e) {
     );
 });
 
+//Waiting/Idle
 self.addEventListener('fetch', function (e) {
     console.log('fetch request : ' + e.request.url)
     e.respondWith(
