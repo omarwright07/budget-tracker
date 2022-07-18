@@ -1,19 +1,12 @@
 const FILES_TO_CACHE = [
     "./index.html",
-    "./events.html",
-    "./tickets.html",
-    "./schedule.html",
-    "./assets/css/style.css",
-    "./assets/css/bootstrap.css",
-    "./assets/css/tickets.css",
-    "./dist/app.bundle.js",
-    "./dist/events.bundle.js",
-    "./dist/tickets.bundle.js",
-    "./dist/schedule.bundle.js"
+    "./css/style.css",
+    "./js/idb.js",
+    "./js/index.js"
 ];
 
-const APP_PREFIX = 'FoodFest-';
-const VERSION = 'version_01';
+const APP_PREFIX = 'BudgetTracker-';
+const VERSION = 'v1';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 // Installation
@@ -59,9 +52,6 @@ self.addEventListener('fetch', function (e) {
                 console.log('file is not cached, fetching : ' + e.request.url)
                 return fetch(e.request)
             }
-
-            // You can omit if/else for console.log & put one line below like this too.
-            // return request || fetch(e.request)
         })
     )
 })

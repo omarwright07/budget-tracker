@@ -46,6 +46,6 @@
   "display": "standalone",
   "start_url": ".",
   "description": "An app that allows you to view budget transactions.",
-  "background_color": "#01579b",
+  "background_color": "#000000",
   "theme_color": "#ffffff"
 }
