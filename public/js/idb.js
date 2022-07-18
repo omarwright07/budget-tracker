@@ -1,6 +1,5 @@
 // create variable to hold db connection
 let db;
-// establish a connection to IndexedDB database called 'budget' and set it to version 1
 const request = indexedDB.open('budget', 1);
 
 // this event will emit if the database version changes (nonexistant to version 1, v1 to v2, etc.)
@@ -52,8 +51,8 @@ function uploadTransaction() {
                         throw new Error(serverResponse);
                     }
                     const transaction = db.transaction(['new_transaction'], 'readwrite');
-                    const pizzaObjectStore = transaction.objectStore('new_transaction');
-                    pizzaObjectStore.clear();
+                    const budgetObjectStore = transaction.objectStore('new_transaction');
+                    budgetObjectStore.clear();
                     alert('All saved transactions has been submitted!');
                 })
                 .catch(err => {
